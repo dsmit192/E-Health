@@ -27,7 +27,7 @@
     <ListView
         android:text="list here"
         android:layout_width="375.0dp"
-        android:layout_height="300"
+        android:layout_height="300dp"
         android:id="@+id/myListView"
         android:layout_marginRight="256.0dp" />
     <Button

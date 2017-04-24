@@ -28,7 +28,7 @@ namespace E_Health.Resources
                 mItems = new List<string>();
                 mItems.Add("Run more");
                 mItems.Add("Drink more water");
-                mItems.Add("Hav less stress");
+                mItems.Add("Have less stress");
 
                 ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, mItems);
 
