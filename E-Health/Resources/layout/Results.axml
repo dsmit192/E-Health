@@ -37,7 +37,7 @@
         android:id="@+id/button1" />
     <Button
         android:text="Download"
-        android:picture="D:\Documenten-D\Erasmus-Lo\Home\G project\E-Health\E-Health\Resources\layout\xtorm.jpg"
+        
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button2"
