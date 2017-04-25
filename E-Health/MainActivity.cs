@@ -1,19 +1,29 @@
 ﻿using Android.App;
-using Android.Widget;
 using Android.OS;
+
 
 namespace E_Health
 {
-    [Activity(Label = "E_Health", MainLauncher = true, Icon = "@drawable/icon")]
+    // Show the splash screen
+    [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
+    public class SplashActivity : Activity
+    {
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
+
+            this.StartActivity(typeof(MainActivity));
+        }
+    }
+    //Show the main view
+    [Activity(Label = "E_Health", Theme = "@android:style/Theme.Holo", MainLauncher = false)]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
-            // Set our view from the "main" layout resource
             SetContentView (Resource.Layout.Main);
         }
     }
 }
-

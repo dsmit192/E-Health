@@ -12,27 +12,27 @@ using Android.Widget;
 
 namespace E_Health.Resources
 {
-    [Activity(Label ="ListView", MainLauncher = true, Icon ="@drawable/icon")]
+    [Activity(Label = "ListView", MainLauncher = false)]
     public class Results : Activity
     {
-  
+
         private List<string> mItems;
         private ListView mListView;
 
         protected override void OnCreate(Bundle bundle)
         {
-                base.OnCreate(bundle);
-                SetContentView(Resource.Layout.Main);
-                mListView = FindViewById<ListView>(Resource.Id.myListView);
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.Main);
+            mListView = FindViewById<ListView>(Resource.Id.myListView);
 
-                mItems = new List<string>();
-                mItems.Add("Run more");
-                mItems.Add("Drink more water");
-                mItems.Add("Have less stress");
+            mItems = new List<string>();
+            mItems.Add("Run more");
+            mItems.Add("Drink more water");
+            mItems.Add("Have less stress");
 
-                ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, mItems);
+            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, mItems);
 
             mListView.Adapter = adapter;
-            }
         }
     }
+}
