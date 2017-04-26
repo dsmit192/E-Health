@@ -22,7 +22,7 @@ namespace E_Health.Resources
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.Results);
             mListView = FindViewById<ListView>(Resource.Id.myListView);
 
             mItems = new List<string>();

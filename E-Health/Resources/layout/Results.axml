@@ -34,12 +34,12 @@
         android:text="Contact a Doctor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button1" />
+        android:id="@+id/button4" />
     <Button
         android:text="Download"
-        
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
+        android:id="@+id/button5"
         android:layout_marginLeft="250.0dp" />
+  
 </LinearLayout>

@@ -86,7 +86,10 @@ namespace E_Health
 			public const int button1 = 2131165198;
 			
 			// aapt resource value: 0x7f070010
-			public const int button2 = 2131165200;
+			public const int button4 = 2131165200;
+			
+			// aapt resource value: 0x7f070011
+			public const int button5 = 2131165201;
 			
 			// aapt resource value: 0x7f070001
 			public const int editText1 = 2131165185;

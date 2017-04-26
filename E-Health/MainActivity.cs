@@ -1,6 +1,11 @@
 ﻿using Android.App;
+using Android.Content.Res;
 using Android.OS;
-
+using Android.Widget;
+using E_Health.Resources;
+using Xamarin.Android;
+using System.Collections.Generic;
+using System;
 
 namespace E_Health
 {
@@ -13,6 +18,7 @@ namespace E_Health
             base.OnCreate(bundle);
 
             this.StartActivity(typeof(MainActivity));
+           
         }
     }
     //Show the main view
@@ -24,6 +30,11 @@ namespace E_Health
             base.OnCreate(bundle);
 
             SetContentView (Resource.Layout.Main);
+            Button nextbutton = FindViewById<Button>(Resource.Id.button1);
+            nextbutton.Click += delegate
+            {
+         SetContentView(Resource.Layout.Results);
+            };
         }
     }
 }
