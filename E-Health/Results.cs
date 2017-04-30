@@ -16,13 +16,26 @@ namespace E_Health.Resources
     public class Results : Activity
     {
         TextView ScoreView;
+        String healtyScore
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Results);
-            string textvb = Intent.GetStringExtra("MyData") ?? "Data not available";
+            //  string textvb = Intent.GetStringExtra("MyData") ?? "Data not available";
+            double numberScore = Intent.GetDoubleExtra("MyData", 0.0);
            ScoreView = FindViewById<TextView>(Resource.Id.textScore);
-            ScoreView.Text = textvb;
+            if (numberScore < 75)
+            {
+                ScoreView.Text = "Very unhealthy";
+                if (numberScore < 50)
+                {
+                    ScoreView.Text = "Unhealthy";
+                    if (numberScore < 35)
+                    {
+                        ScoreView.Text = "Healthy";
+                    }
+                }
+            }  
         }
     }
 }

@@ -27,12 +27,14 @@ namespace E_Health
     [Activity(Label = "E_Health", Theme = "@android:style/Theme.Holo", MainLauncher = false)]
     public class MainActivity : Activity
     {
+        Double number;
         Button submitButton;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             SetContentView (Resource.Layout.Main);
+            number = 50;
             submitButton = FindViewById<Button>(Resource.Id.submitButton);
             submitButton.Click += helpButton_Click;
         }
@@ -40,7 +42,7 @@ namespace E_Health
         private void helpButton_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(Results));
-            intent.PutExtra("MyData", "55");
+            intent.PutExtra("MyData", number);
             StartActivity(intent);
         }
     }
