@@ -6,13 +6,15 @@ using E_Health.Resources;
 using Xamarin.Android;
 using System.Collections.Generic;
 using System;
+using Android.Content;
 
 namespace E_Health
 {
     // Show the splash screen
-    [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
+    [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true)]
     public class SplashActivity : Activity
     {
+     
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -25,16 +27,21 @@ namespace E_Health
     [Activity(Label = "E_Health", Theme = "@android:style/Theme.Holo", MainLauncher = false)]
     public class MainActivity : Activity
     {
+        Button submitButton;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             SetContentView (Resource.Layout.Main);
-            Button nextbutton = FindViewById<Button>(Resource.Id.button1);
-            nextbutton.Click += delegate
-            {
-         SetContentView(Resource.Layout.Results);
-            };
+            submitButton = FindViewById<Button>(Resource.Id.submitButton);
+            submitButton.Click += helpButton_Click;
+        }
+
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(Results));
+            intent.PutExtra("MyData", "55");
+            StartActivity(intent);
         }
     }
 }

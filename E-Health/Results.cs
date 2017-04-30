@@ -12,27 +12,17 @@ using Android.Widget;
 
 namespace E_Health.Resources
 {
-    [Activity(Label = "ListView", MainLauncher = false)]
+    [Activity(Label = "Results")]
     public class Results : Activity
     {
-
-        private List<string> mItems;
-        private ListView mListView;
-
+        TextView ScoreView;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Results);
-            mListView = FindViewById<ListView>(Resource.Id.myListView);
-
-            mItems = new List<string>();
-            mItems.Add("Run more");
-            mItems.Add("Drink more water");
-            mItems.Add("Have less stress");
-
-            ArrayAdapter<string> adapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, mItems);
-
-            mListView.Adapter = adapter;
+            string textvb = Intent.GetStringExtra("MyData") ?? "Data not available";
+           ScoreView = FindViewById<TextView>(Resource.Id.textScore);
+            ScoreView.Text = textvb;
         }
     }
 }
