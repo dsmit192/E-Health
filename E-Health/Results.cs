@@ -16,7 +16,7 @@ namespace E_Health.Resources
     public class Results : Activity
     {
         TextView ScoreView;
-        String healtyScore
+        String healtyScore;
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
