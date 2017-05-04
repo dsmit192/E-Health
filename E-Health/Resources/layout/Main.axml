@@ -8,44 +8,44 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:id="@+id/HeightText" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText1"
+        android:id="@+id/HeightInput"
         android:background="@android:color/background_light" />
     <TextView
         android:text="Weight (KG)"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1" />
+        android:id="@+id/WeightText" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
+        android:id="@+id/WeightInput"
         android:background="@android:color/background_light" />
     <TextView
         android:text="Blood Pressure (kPa)"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/BloodPressureText" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText3"
+        android:id="@+id/BloodPressureInput"
         android:background="@android:color/background_light" />
     <TextView
         android:text="Temperature (C)"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3" />
+        android:id="@+id/TemperatureText" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText4"
+        android:id="@+id/TemperatureInput"
         android:background="@android:color/background_light" />
     <RadioGroup
         android:layout_width="match_parent"
@@ -82,10 +82,16 @@
     <RatingBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ratingBar1" />
+        android:id="@+id/RatingBar" />
     <Button
         android:text="SUBMIT"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/submitButton" />
+        android:id="@+id/SubmitButton" />
+    <TextView
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TESTING" />
 </LinearLayout>
